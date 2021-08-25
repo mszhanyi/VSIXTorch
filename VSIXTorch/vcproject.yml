@@ -1,0 +1,87 @@
+﻿#################################################
+# Pytorch Project Settings
+#################################################
+setting_includes: &setting_cpu_includes  
+    torch_dirs: 
+        - libtorch\include
+        - libtorch\include\torch\csrc\api\include
+
+setting_gpu_includes: &setting_gpu_includes  
+    cuda_dir:
+        - include
+    nvtools_dir:
+        - include
+    torch_dirs: 
+        - libtorch\include
+        - libtorch\include\torch\csrc\api\include
+    
+        
+setting_cpu_libs: &setting_cpu_libs
+    torch_libs:
+        - c10.lib
+        - torch.lib
+        - torch_cpu.lib
+
+setting_cuda_libs: &setting_cuda_libs
+    - cublas.lib
+    - cudart.lib
+    - cudnn.lib
+    - cufft.lib
+    - curand.lib
+    
+setting_torch_gpu_libs: &setting_torch_gpu_libs
+    cuda_libs: *setting_cuda_libs
+    nvtools_libs:
+        - nvToolsExt64_1.lib
+    torch_libs:
+        - caffe2_nvrtc.lib
+        - c10.lib
+        - c10_cuda.lib
+        - kineto.lib>=1.9
+        - torch.lib
+        - torch_cpu.lib
+        - torch_cuda.lib
+
+# For cuda_version > 11 Since Pytorch 1.8
+setting_torch_split_gpu_libs: &setting_torch_split_gpu_libs
+    cuda_libs: *setting_cuda_libs
+    nvtools_libs:
+        - nvToolsExt64_1.lib    
+    torch_libs: 
+        - caffe2_nvrtc.lib
+        - c10.lib
+        - c10_cuda.lib
+        - kineto.lib>=1.9
+        - torch.lib
+        - torch_cpu.lib
+        - torch_cuda.lib
+        - torch_cuda_cpp.lib
+        - torch_cuda_cu.lib
+
+pytorch_setting_cpu_params: &pytorch_setting_cpu_params
+    includes: *setting_cpu_includes
+    libs: *setting_cpu_libs
+
+pytorch_setting_cuda_params: &pytorch_setting_cuda_params
+    includes: *setting_gpu_includes
+    libs: *setting_torch_gpu_libs
+    link_options: -INCLUDE:?warp_size@cuda@at@@YAHXZ
+        
+pytorch_setting_split_cuda_params: &pytorch_setting_split_cuda_params
+    includes: *setting_gpu_includes
+    libs: *setting_torch_split_gpu_libs
+    link_options: -INCLUDE:?warp_size@cuda@at@@YAHXZ;-INCLUDE:?searchsorted_cuda@native@at@@YA?AVTensor@2@AEBV32@0_N1@Z
+
+projects:
+    1.10:
+        cpu: *pytorch_setting_cpu_params
+        102: *pytorch_setting_cuda_params
+        111: *pytorch_setting_split_cuda_params
+    1.9:
+        cpu: *pytorch_setting_cpu_params
+        102: *pytorch_setting_cuda_params
+        111: *pytorch_setting_split_cuda_params
+    1.8:
+        cpu: *pytorch_setting_cpu_params
+        102: *pytorch_setting_cuda_params
+        111: *pytorch_setting_split_cuda_params        

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31410.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VSIXTorch", "VSIXTorch.csproj", "{2C35C605-2019-4238-8EDB-ABF2479D33EC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "yaml2Json", "..\yaml2Json\yaml2Json.csproj", "{62622474-C8EC-45AE-8493-E309B74461EF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2C35C605-2019-4238-8EDB-ABF2479D33EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C35C605-2019-4238-8EDB-ABF2479D33EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C35C605-2019-4238-8EDB-ABF2479D33EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C35C605-2019-4238-8EDB-ABF2479D33EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62622474-C8EC-45AE-8493-E309B74461EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62622474-C8EC-45AE-8493-E309B74461EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62622474-C8EC-45AE-8493-E309B74461EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62622474-C8EC-45AE-8493-E309B74461EF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FCC7B8DE-2CDF-453B-B6F2-90DAFC044716}
+	EndGlobalSection
+EndGlobal
