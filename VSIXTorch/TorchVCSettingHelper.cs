@@ -196,10 +196,21 @@
             return true;
         }
 
+        // remove the possible >=
+        private string Combine(string prefix, string component)
+        {
+            var biggeridx = component.IndexOf(">=");
+            if (biggeridx > 0)
+            {
+                component = component.Substring(0, biggeridx);
+            }
+            return Path.Combine(prefix, component);
+        }
+
         private string CombinePaths(string prefix, JArray paths)
         {
             var d1 = paths.ToObject<List<string>>();
-            var d2 = d1.Where(x => Exist(x)).Select(x => Path.Combine(prefix, x)).ToList();
+            var d2 = d1.Where(x => Exist(x)).Select(x => this.Combine(prefix, x)).ToList();
             return string.Join(";", d2);
         }
     }

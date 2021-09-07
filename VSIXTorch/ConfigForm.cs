@@ -53,7 +53,7 @@
         {
             get
             {
-                return this.ExtractVersionText(@"(\d+\.\d+\.\d)");
+                return this.ExtractVersionText(@"(\d+\.\d+\.\d+)");
             }
         }
 
