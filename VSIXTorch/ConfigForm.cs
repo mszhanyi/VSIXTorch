@@ -207,6 +207,34 @@
                 this.ClearSelection();
             }
 
+            
+            if (!String.Equals(this.TorchCUDAVersion, "cpu", StringComparison.OrdinalIgnoreCase))
+            {
+                // CUDA_PATH must not be empty if libtorch package with CUDA is selected.
+                if (String.IsNullOrWhiteSpace(this.lbl_cudapath.Text))
+                {
+                    MessageBox.Show("You choose to create a torch project with CUDA, but CUDA_PATH is empty!\n Did you install the cuda toolkit?",
+                        "Torch Project", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                var cudnn_path = this.lbl_cudapath.Text + "\\include\\cudnn.h";
+                // cuDNN should be installed too. cudnn.h
+                if (!String.IsNullOrWhiteSpace(this.lbl_cudapath.Text) && !File.Exists(cudnn_path))
+                {
+                    MessageBox.Show("You choose to create a torch project with CUDA, but cuDNN isn't installed!",
+                        "Torch Project", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (String.IsNullOrWhiteSpace(this.lbl_nvtoolspath.Text))
+                {
+                    MessageBox.Show("You choose to create a torch project with CUDA, but NVTOOLSEXT_PATH is empty!",
+                        "Torch Project", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+            }
+
             // use major + minor for exmaple 1.9 for 1.9.0 or 1.9.1, because interface won't change with build number x.x.buildnumber
             var torch_version = this.TorchVersion.Substring(0, this.TorchVersion.Length - 2);
             if (!this.ValidationProjectSettings(torch_version, this.TorchCUDAVersion, this.TorchFullVersion))
