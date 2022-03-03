@@ -9,8 +9,8 @@ It helps deverlopers to setup [PyTorch C++ Project](https://pytorch.org/cppdocs/
 2. Change `Project settings->Configuration Properties->Advanced->Target File Extension` to `dll`
 
 ## example
-'''
-extern "C" __declspec(dllexport) int check_cuda() 
+```C++
+extern "C" __declspec(dllexport) int check_cuda()
 {
     if (torch::cuda::is_available()) {
         return 1;
@@ -20,4 +20,4 @@ extern "C" __declspec(dllexport) int check_cuda()
         return 0;
     }
 }
-'''
+```

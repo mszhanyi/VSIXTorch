@@ -72,7 +72,18 @@ pytorch_setting_split_cuda_params: &pytorch_setting_split_cuda_params
     libs: *setting_torch_split_gpu_libs
     link_options: -INCLUDE:?warp_size@cuda@at@@YAHXZ;-INCLUDE:?searchsorted_cuda@native@at@@YA?AVTensor@2@AEBV32@0_N1@Z
 
+# since pytorch 1.11
+pytorch_setting_split_cuda_params_1: &pytorch_setting_split_cuda_params_1
+    includes: *setting_gpu_includes
+    libs: *setting_torch_split_gpu_libs
+    link_options: -INCLUDE:?warp_size@cuda@at@@YAHXZ;-INCLUDE:?_torch_cuda_cu_linker_symbol_op_cuda@native@at@@YA?AVTensor@2@AEBV32@@Z
+
 projects:
+    1.11:
+        cpu: *pytorch_setting_cpu_params
+        102: *pytorch_setting_cuda_params
+        111: *pytorch_setting_split_cuda_params_1
+        113: *pytorch_setting_split_cuda_params_1
     1.10:
         cpu: *pytorch_setting_cpu_params
         102: *pytorch_setting_cuda_params
