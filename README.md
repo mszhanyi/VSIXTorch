@@ -10,7 +10,8 @@ It helps deverlopers to setup [PyTorch C++ Project](https://pytorch.org/cppdocs/
 
 ## example
 ```C++
-extern "C" __declspec(dllexport) int check_cuda()
+#include <torch/torch.h>
+extern "C" __declspec(dllexport) int check_cuda() 
 {
     if (torch::cuda::is_available()) {
         return 1;
