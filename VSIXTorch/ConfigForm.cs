@@ -186,17 +186,24 @@
 
         private void btn_OK_Click(object sender, EventArgs e)
         {
+            if (String.IsNullOrWhiteSpace(this.txt_debug_dir.Text) && String.IsNullOrWhiteSpace(this.txt_release_dir.Text))
+            {
+                MessageBox.Show("At least one libtorch directory should be selected");
+                return;
+            }
+            if (String.IsNullOrWhiteSpace(this.txt_debug_dir.Text)) {
+                this.lbl_debug_torchversion.Text = string.Empty;
+            }
+            if (String.IsNullOrWhiteSpace(this.txt_release_dir.Text))
+            {
+                this.lbl_release_torchversion.Text = string.Empty;
+            }
             if (!String.IsNullOrWhiteSpace(this.lbl_debug_torchversion.Text) && !String.IsNullOrWhiteSpace(this.lbl_release_torchversion.Text))
             {
                 if (!String.Equals(lbl_debug_torchversion.Text, lbl_release_torchversion.Text)) {
                     MessageBox.Show("Debug version is different from Release version");
                     return;
                 }
-            }
-            if (String.IsNullOrWhiteSpace(this.txt_debug_dir.Text) && String.IsNullOrWhiteSpace(this.txt_release_dir.Text))
-            {
-                MessageBox.Show("At least one libtorch directory should be selected");
-                return;
             }
             if (this.chk_remember.Checked)
             {
