@@ -23,4 +23,5 @@ extern "C" __declspec(dllexport) int check_cuda()
 }
 ```
 
-# [Tutorial Video](https://ossci-windows.s3.us-east-1.amazonaws.com/vsextension/demo.mp4)
+# Tutorial Video
+https://ossci-windows.s3.us-east-1.amazonaws.com/vsextension/demo.mp4)
