@@ -81,8 +81,6 @@ pytorch_setting_split_cuda_params_1: &pytorch_setting_split_cuda_params_1
 projects:
     1.11:
         cpu: *pytorch_setting_cpu_params
-        102: *pytorch_setting_cuda_params
-        111: *pytorch_setting_split_cuda_params_1
         113: *pytorch_setting_split_cuda_params_1
     1.10:
         cpu: *pytorch_setting_cpu_params

@@ -33,7 +33,7 @@ namespace Yaml2Json
         private static async Task Run(CliArgs args)
         {
             if (string.IsNullOrWhiteSpace(args.Target))
-                args.Target = Path.ChangeExtension(args.Source, ".jsonl");
+                args.Target = Path.ChangeExtension(args.Source, ".json");
 
             long count = 0;
 
