@@ -1,6 +1,5 @@
 # VSIXTorch
-It helps deverlopers to setup [PyTorch C++ Project](https://pytorch.org/cppdocs/installing.html) on Windows without CMake
-[Tutorial Video](https://ossci-windows.s3.us-east-1.amazonaws.com/vsextension/demo.mp4)
+It helps deverlopers to setup [PyTorch C++ Project](https://pytorch.org/cppdocs/installing.html) on Windows without CMake.
 
 # Visual Studio Extension Download Link
 [LibTorch Project Template](https://marketplace.visualstudio.com/items?itemName=YiZhang.LibTorch001)
@@ -23,3 +22,5 @@ extern "C" __declspec(dllexport) int check_cuda()
     }
 }
 ```
+
+# [Tutorial Video](https://ossci-windows.s3.us-east-1.amazonaws.com/vsextension/demo.mp4)
