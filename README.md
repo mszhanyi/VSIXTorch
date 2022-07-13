@@ -14,13 +14,13 @@ https://download.pytorch.org/libtorch/{cuda-version}/libtorch-win-shared-with-de
 Release <br>
 https://download.pytorch.org/libtorch/{cuda-version}/libtorch-win-shared-with-deps{pytorch-version}%2B{cuversion}.zip
 
-There's a fantastic link to download all released libtorch.
-https://blog.csdn.net/guzhao9901/article/details/125051108
-
 For example
 Libtorch {1.11.0 cu113 debug} download link is <br>
 https://download.pytorch.org/libtorch/cu113/libtorch-win-shared-with-deps-debug-1.11.0%2Bcu113.zip<br>
 If it's a cpu version, the {cuda-version} is cpu
+
+## There's a fantastic link to download all released libtorch binaries. <br>
+https://blog.csdn.net/guzhao9901/article/details/125051108
 
 # How to build dll
 1. Change `Project settings->Configuration Properties->General->Configuration Type` to `Dynamic Library(.dll)`
