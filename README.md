@@ -1,6 +1,6 @@
 # VSIXTorch
 It helps deverlopers to setup [PyTorch C++ Project](https://pytorch.org/cppdocs/installing.html) on Windows without CMake.
-So far, it only supports VS 2019. It's *NOT* available on VS 2022
+It supports VS 2019 and VS 2022.
 
 # Visual Studio Extension Download Link
 [LibTorch Project Template](https://marketplace.visualstudio.com/items?itemName=YiZhang.LibTorch001)
