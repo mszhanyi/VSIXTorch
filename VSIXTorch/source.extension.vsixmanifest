@@ -1,25 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="VSIXTorch.58930436-5e14-4760-a334-3ab7650104aa" Version="0.8.0" Language="en-US" Publisher="Yi Zhang" />
+        <Identity Id="VSIXTorch.58930436-5e14-4760-a334-3ab7650104aa" Version="1.1.9" Language="en-US" Publisher="Yi Zhang" />
         <DisplayName>LibTorch Project</DisplayName>
-        <Description xml:space="preserve">LibTorch C++ Project Template</Description>
-        <ReleaseNotes>support VS 2022</ReleaseNotes>
+        <Description xml:space="preserve">LibTorch C++ Project Template In Visual Studio 2019</Description>
+        <MoreInfo>https://github.com/mszhanyi/VSIXTorch</MoreInfo>
+        <ReleaseNotes>LibTorch for 2019</ReleaseNotes>
         <Tags>Pytorch;LibTorch;C++</Tags>
     </Metadata>
     <Installation>
-        <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[15.0,17.0)">
-            <ProductArchitecture>x86</ProductArchitecture>
-        </InstallationTarget>
-        <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[16.0, 18.0)">
-            <ProductArchitecture>amd64</ProductArchitecture>
-        </InstallationTarget>
+        <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[15.0,17.0)" />
     </Installation>
     <Dependencies>
         <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.5,)" />
     </Dependencies>
     <Prerequisites>
-        <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[16.0,18.0)" DisplayName="Visual Studio core editor" />
+        <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[16.0,17.0)" DisplayName="Visual Studio core editor" />
     </Prerequisites>
     <Assets>
         <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%;PkgdefProjectOutputGroup|" />

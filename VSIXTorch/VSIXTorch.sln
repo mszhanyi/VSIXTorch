@@ -1,11 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31410.357
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VSIXTorch", "VSIXTorch.csproj", "{2C35C605-2019-4238-8EDB-ABF2479D33EC}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "yaml2Json", "..\yaml2Json\yaml2Json.csproj", "{62622474-C8EC-45AE-8493-E309B74461EF}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "VSIXTorchShared", "..\VSIXTorchShared\VSIXTorchShared.shproj", "{EE14D025-0F3B-45A3-94F7-230F3029B2D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VSIXTorch2022", "..\VSIXTorch2022\VSIXTorch2022.csproj", "{0DE65C8E-A243-4F9E-87F7-FD9BDADB1F76}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,11 +25,20 @@ Global
 		{62622474-C8EC-45AE-8493-E309B74461EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{62622474-C8EC-45AE-8493-E309B74461EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{62622474-C8EC-45AE-8493-E309B74461EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DE65C8E-A243-4F9E-87F7-FD9BDADB1F76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DE65C8E-A243-4F9E-87F7-FD9BDADB1F76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DE65C8E-A243-4F9E-87F7-FD9BDADB1F76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DE65C8E-A243-4F9E-87F7-FD9BDADB1F76}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FCC7B8DE-2CDF-453B-B6F2-90DAFC044716}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		..\VSIXTorchShared\VSIXTorchShared.projitems*{0de65c8e-a243-4f9e-87f7-fd9bdadb1f76}*SharedItemsImports = 4
+		..\VSIXTorchShared\VSIXTorchShared.projitems*{2c35c605-2019-4238-8edb-abf2479d33ec}*SharedItemsImports = 4
+		..\VSIXTorchShared\VSIXTorchShared.projitems*{ee14d025-0f3b-45a3-94f7-230f3029b2d6}*SharedItemsImports = 13
 	EndGlobalSection
 EndGlobal
