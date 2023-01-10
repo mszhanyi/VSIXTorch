@@ -9,27 +9,12 @@
     <Import_RootNamespace>VSIXTorchShared</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)ConfigForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)ConfigForm.Designer.cs">
-      <DependentUpon>ConfigForm.cs</DependentUpon>
-    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ConfigForm.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ConfigForm.Designer.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)TorchVCSettingHelper.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)VSIXTorchPackage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)WizardImplementation.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)ConfigForm.resx">
-      <DependentUpon>ConfigForm.cs</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="$(MSBuildThisFileDirectory)ProjectTemplates\TorchProject.zip">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="$(MSBuildThisFileDirectory)vcproject.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)ConfigForm.resx" />
   </ItemGroup>
 </Project>

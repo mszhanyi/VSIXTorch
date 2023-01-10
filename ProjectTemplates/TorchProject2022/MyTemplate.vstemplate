@@ -1,7 +1,7 @@
 <VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
   <TemplateData>
     <Name>TorchProject</Name>
-    <Description>libtorch in Visual Studio</Description>
+    <Description>libtorch Project in Visual Studio 2022</Description>
     <ProjectType>VC</ProjectType>
     <LanguageTag>cpp</LanguageTag>
     <PlatformTag>windows</PlatformTag>
@@ -23,7 +23,7 @@
     </Project>
   </TemplateContent>
   <WizardExtension>
-    <Assembly>VSIXTorch, Version=1.0.0.0, Culture=Neutral, PublicKeyToken=null</Assembly>
+    <Assembly>VSIXTorch2022, Version=1.0.0.0, Culture=Neutral, PublicKeyToken=null</Assembly>
     <FullClassName>VSIXTorch.WizardImplementation</FullClassName>
   </WizardExtension>
 </VSTemplate>

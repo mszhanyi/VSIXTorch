@@ -54,8 +54,18 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VSIXTorchPackage.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="..\ProjectTemplates\TorchProject.zip">
+      <Link>ProjectTemplates\TorchProject.zip</Link>
+      <IncludeInVSIX>true</IncludeInVSIX>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\SharedFiles\vcproject.json">
+      <Link>vcproject.json</Link>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <None Include="source.extension.vsixmanifest">
       <SubType>Designer</SubType>
     </None>
