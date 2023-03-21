@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="VSIXTorch2022.65A5CC5C-FC76-4939-8EF0-5E264F2C9F01" Version="0.9.0" Language="en-US" Publisher="Yi Zhang" />
+        <Identity Id="VSIXTorch2022.65A5CC5C-FC76-4939-8EF0-5E264F2C9F01" Version="0.10.1" Language="en-US" Publisher="Yi Zhang" />
         <DisplayName>LibTorch Project (64-bit)</DisplayName>
         <Description xml:space="preserve">LibTorch C++ Project Template In Visual Studio 2022</Description>
         <MoreInfo>https://github.com/mszhanyi/VSIXTorch</MoreInfo>
-        <ReleaseNotes>VSIX Torch 2022</ReleaseNotes>
+        <ReleaseNotes>support PyTorch 2.0</ReleaseNotes>
         <Tags>Pytorch;LibTorch;C++</Tags>
         <Preview>true</Preview>
     </Metadata>
