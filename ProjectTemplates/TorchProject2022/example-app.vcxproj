@@ -91,7 +91,7 @@
     <PostBuildEvent>
       <Message></Message>
       <Command>setlocal
-xcopy $torch_debug_dir$\libtorch\lib $destinationdirectory$\x64\Debug /D /Y
+xcopy "$torch_debug_dir$\libtorch\lib" "$destinationdirectory$\x64\Debug" /D /Y
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -122,7 +122,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <DisableSpecificWarnings>4267;4251;4522;4838;4305;4244;4190;4101;4996;4275</DisableSpecificWarnings>
       <ExceptionHandling>Sync</ExceptionHandling>
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
-      <LanguageStandard>stdcpp14</LanguageStandard>
+      <LanguageStandard>stdcpp17</LanguageStandard>
       <Optimization>MaxSpeed</Optimization>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
@@ -149,7 +149,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <PostBuildEvent>
       <Message></Message>
       <Command>setlocal
-xcopy $torch_release_dir$\libtorch\lib $destinationdirectory$\x64\Release /D /Y
+xcopy "$torch_release_dir$\libtorch\lib" "$destinationdirectory$\x64\Release" /D /Y
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone

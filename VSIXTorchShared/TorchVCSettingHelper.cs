@@ -7,6 +7,7 @@
     using System.IO;
     using System.Linq;
     using System.Text.RegularExpressions;
+    using static Microsoft.VisualStudio.Shell.ThreadedWaitDialogHelper;
 
     public class TorchSettingException: Exception
     {
@@ -152,20 +153,22 @@
 
         private JToken TorchVersion(JToken root)
         {
-            var jtoken = root[this.torch_version];
+            var version = this.torch_version;
+            var jtoken = root[version];
             if (jtoken == null)
             {
-                throw new TorchSettingException(String.Format("torch {0} isn't supported yet", this.torch_version));
+                throw new TorchSettingException(String.Format("torch {0} isn't supported yet", version));
             }
             return jtoken;
         }
 
         private JToken TorchCUDAVersion(JToken torch_version)
         {
-            var jtoken = torch_version[this.torch_cuda_version];
+            var cuda_version = torch_cuda_version.ToLower();
+            var jtoken = torch_version[cuda_version];
             if (jtoken == null)
             {
-                throw new TorchSettingException(String.Format("torch {0} isn't supported yet", this.torch_full_version));
+                throw new TorchSettingException(String.Format("cuda {0} isn't supported yet", this.torch_cuda_version));
             }
             return jtoken;
         }

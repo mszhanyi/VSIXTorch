@@ -225,15 +225,6 @@
                     return;
                 }
 
-                var cudnn_path = this.lbl_cudapath.Text + "\\include\\cudnn.h";
-                // cuDNN should be installed too. cudnn.h
-                if (!String.IsNullOrWhiteSpace(this.lbl_cudapath.Text) && !File.Exists(cudnn_path))
-                {
-                    MessageBox.Show("You choose to create a torch project with CUDA, but cuDNN isn't installed!",
-                        "Torch Project", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-
                 if (String.IsNullOrWhiteSpace(this.lbl_nvtoolspath.Text))
                 {
                     MessageBox.Show("You choose to create a torch project with CUDA, but NVTOOLSEXT_PATH is empty!",

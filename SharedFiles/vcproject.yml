@@ -79,6 +79,10 @@ pytorch_setting_split_cuda_params_1: &pytorch_setting_split_cuda_params_1
     link_options: -INCLUDE:?warp_size@cuda@at@@YAHXZ;-INCLUDE:?_torch_cuda_cu_linker_symbol_op_cuda@native@at@@YA?AVTensor@2@AEBV32@@Z
 
 projects:
+    2.1:
+        cpu: *pytorch_setting_cpu_params
+        118: *pytorch_setting_cuda_params
+        121: *pytorch_setting_cuda_params
     2.0:
         cpu: *pytorch_setting_cpu_params
         117: *pytorch_setting_cuda_params
