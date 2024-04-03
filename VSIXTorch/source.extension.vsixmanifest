@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="VSIXTorch.58930436-5e14-4760-a334-3ab7650104aa" Version="0.11.5" Language="en-US" Publisher="Yi Zhang" />
+        <Identity Id="VSIXTorch.58930436-5e14-4760-a334-3ab7650104aa" Version="0.11.8" Language="en-US" Publisher="Yi Zhang" />
         <DisplayName>LibTorch Project</DisplayName>
         <Description xml:space="preserve">LibTorch C++ Project Template In Visual Studio 2019</Description>
         <MoreInfo>https://github.com/mszhanyi/VSIXTorch</MoreInfo>
-        <ReleaseNotes>Support Pytorch 2.0 and above</ReleaseNotes>
+        <ReleaseNotes>Fix bug in VS2019</ReleaseNotes>
         <Tags>Pytorch;LibTorch;C++</Tags>
     </Metadata>
     <Installation>
